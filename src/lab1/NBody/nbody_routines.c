@@ -25,7 +25,7 @@ void bodyForce(body *p, float dt, int n) {
 			}
 		}
 
-		p[i].vx += dt*Fx/p[i].m; p[i].vy += dt*Fy/p[i].m; p[i].vz += dt*Fz/p[i].m;
+		p->vx[i] += dt*Fx/p->m[i]; p->vy[i] += dt*Fy/p->m[i]; p->vz[i] += dt*Fz/p->m[i];
 	}
 }
 

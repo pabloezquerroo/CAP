@@ -29,8 +29,7 @@ int main(const int argc, const char** argv) {
 	const float dt = 0.01f; // time step
 	const int nIters = 100;  // simulation iterations
 
-	//body *p = get_memory(nBodies);
-	body* p = get_memory(nBodies);
+	body *p = get_memory(nBodies);
 
 	randomizeBodies(p, nBodies); // Init pos / vel data
 

@@ -4,16 +4,17 @@
 
 body* get_memory(int nBodies)
 {
-	//body *p = (body*)malloc(nBodies*sizeof(body));
+    // body *p = (body*)malloc(nBodies*sizeof(body));
+	// body *p = (body*)malloc(sizeof(body)); //chat
 	body p;
-	p.m = (float*)malloc(nBodies*sizeof(body));
-	p.x = (float*)malloc(nBodies*sizeof(body));
-	p.y = (float*)malloc(nBodies*sizeof(body));
-	p.z = (float*)malloc(nBodies*sizeof(body));
-	p.vx = (float*)malloc(nBodies*sizeof(body));
-	p.vy = (float*)malloc(nBodies*sizeof(body));
-	p.vz = (float*)malloc(nBodies*sizeof(body));
-	return *p;
+    p.m = (float*)malloc(nBodies*sizeof(float));
+    p.x = (float*)malloc(nBodies*sizeof(float));
+    p.y = (float*)malloc(nBodies*sizeof(float));
+    p.z = (float*)malloc(nBodies*sizeof(float));
+    p.vx = (float*)malloc(nBodies*sizeof(float));
+    p.vy = (float*)malloc(nBodies*sizeof(float));
+    p.vz = (float*)malloc(nBodies*sizeof(float));
+    return &p;
 }
 
 void free_memory(body *p)
@@ -25,6 +26,7 @@ void free_memory(body *p)
 	free(p->x);
 	free(p->y);
 	free(p->z);
+	//free(p);
 }
 
 void randomizeBodies(body *data, int n) {
