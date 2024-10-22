@@ -6,7 +6,6 @@ body* get_memory(int nBodies)
 {
     // body *p = (body*)malloc(nBodies*sizeof(body));
 	body *p = (body*)malloc(sizeof(body)); //chat
-	//body p;
     p->m = (float*)malloc(nBodies*sizeof(float));
     p->x = (float*)malloc(nBodies*sizeof(float));
     p->y = (float*)malloc(nBodies*sizeof(float));
