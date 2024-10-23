@@ -7,7 +7,7 @@ SOURCES    = main.c
 
 OBJS    = stencil.o pngio.o main.o 
 
-CFLAGS     = -O2
+CFLAGS     = -O2 -mavx -mavx2
 NVCFLAGS   = $(CFLAGS)
 
 LIBS =  -lm -lpng
